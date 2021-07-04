@@ -2,12 +2,6 @@
   "name": "dogfight_arena",
   "version": "1.0.0",
   "description": "An aerial warfare game/experiment",
-  "main": "index.js",
-  "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url ./",
-    "lint": "eslint ./src/*"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stefanuros/dogfight_arena.git"
@@ -18,6 +12,17 @@
     "url": "https://github.com/stefanuros/dogfight_arena/issues"
   },
   "homepage": "https://github.com/stefanuros/dogfight_arena#readme",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./",
+    "lint": "npm run eslint:check && npm run prettier:check",
+    "format": "npm run eslint:fix && npm run prettier:fix",
+    "eslint:check": "eslint ./src/*",
+    "eslint:fix": "eslint ./src/* --fix",
+    "prettier:check": "prettier --check ./src",
+    "prettier:fix": "prettier --write ./src",
+    "prepare": "husky install"
+  },
   "dependencies": {
     "three": "^0.130.0"
   },
@@ -27,7 +32,9 @@
     "@typescript-eslint/parser": "^4.28.1",
     "eslint": "^7.30.0",
     "eslint-config-google": "^0.14.0",
+    "husky": "^7.0.0",
     "parcel-bundler": "^1.12.5",
+    "prettier": "2.3.2",
     "typescript": "^4.3.5"
   }
 }

@@ -1,3 +1,3 @@
-import AppGame from './AppGame';
+import AppGame from './AppGame'
 
-new AppGame();
+new AppGame()

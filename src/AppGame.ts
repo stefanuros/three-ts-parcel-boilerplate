@@ -5,24 +5,21 @@ import {
   Mesh,
   CylinderBufferGeometry,
   MeshBasicMaterial,
-
 } from 'three'
 
 export default class AppGame {
-  wWidth:number
-  wHeight:number
+  wWidth: number
+  wHeight: number
 
-  scene:Scene
-  camera:PerspectiveCamera
-  renderer:WebGLRenderer
+  scene: Scene
+  camera: PerspectiveCamera
+  renderer: WebGLRenderer
 
-  cube:Mesh
+  cube: Mesh
 
   get aspect() {
     return this.wWidth / this.wHeight
   }
-
-  test:number
 
   constructor() {
     this.wWidth = window.innerWidth
@@ -46,11 +43,11 @@ export default class AppGame {
     this.scene.add(this.cube)
 
     this.renderer = new WebGLRenderer()
-    this.renderer.setSize( this.wWidth, this.wHeight )
-    document.body.appendChild( this.renderer.domElement )
+    this.renderer.setSize(this.wWidth, this.wHeight)
+    document.body.appendChild(this.renderer.domElement)
 
     // add Events Global
-    window.addEventListener( 'resize', this.onWindowResize.bind(this), false)
+    window.addEventListener('resize', this.onWindowResize.bind(this), false)
 
     this.animate()
   }
