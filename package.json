@@ -1,0 +1,33 @@
+{
+  "name": "dogfight_arena",
+  "version": "1.0.0",
+  "description": "An aerial warfare game/experiment",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./",
+    "lint": "eslint ./src/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanuros/dogfight_arena.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefanuros/dogfight_arena/issues"
+  },
+  "homepage": "https://github.com/stefanuros/dogfight_arena#readme",
+  "dependencies": {
+    "three": "^0.130.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.129.2",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "eslint": "^7.30.0",
+    "eslint-config-google": "^0.14.0",
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^4.3.5"
+  }
+}
